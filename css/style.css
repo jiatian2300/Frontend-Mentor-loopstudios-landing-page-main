@@ -23,6 +23,7 @@ h1 {
   text-transform: uppercase;
   color: white;
   font-size: 2.6rem;
+  font-weight: 300;
   line-height: 1;
   margin: 0.5em 0;
 }
@@ -202,6 +203,16 @@ main {
       align-self: end;
   -ms-grid-column-align: start;
       justify-self: start;
+  z-index: 2;
+}
+
+.creations .gallery .overlay {
+  z-index: 1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, rgba(0, 0, 0, 0.5)));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5) 80%);
+  margin-bottom: 7px;
+  grid-row: 1/-1;
+  grid-column: 1/-1;
 }
 
 .creations .see-all {
@@ -268,5 +279,162 @@ footer .copyright {
 .attribution a {
   font-family: "Josefin Sans", sans-serif;
   color: #3e52a3;
+}
+
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 22px;
+    font-weight: 300;
+  }
+  .container {
+    padding: 3em 7em 0;
+  }
+  header {
+    background-image: url(../images/desktop/image-hero.jpg);
+    background-size: 100%;
+    height: 51vh;
+  }
+  header .header-content {
+    width: 58%;
+  }
+  header .header-content h1 {
+    font-size: 3rem;
+  }
+  header .nav-btns {
+    position: relative;
+    background: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    gap: 1.5em;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  header .nav-btns a {
+    text-transform: none;
+    padding-left: 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  header .nav-toggle {
+    display: none;
+  }
+  header .header-content {
+    margin-top: 0;
+  }
+  main {
+    text-align: left;
+  }
+  .interactive {
+    padding: 3em 0 0;
+    position: relative;
+  }
+  .interactive .interact__txt {
+    background: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    padding: 1em 0 0 4em;
+  }
+  .interactive .interact__txt p {
+    font-size: 0.78rem;
+    margin-bottom: 0;
+  }
+  .creations {
+    padding-top: 7em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr auto;
+        grid-template-columns: 1fr auto;
+    -ms-grid-rows: 2;
+        grid-template-rows: 2;
+    grid-auto-flow: dense;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .creations h2 {
+    margin: 0;
+    padding: 0;
+  }
+  .creations .gallery {
+    padding-top: 3em;
+    grid-column: span 2;
+  }
+  .creations .gallery .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .creations .gallery .item {
+    padding-bottom: 0.8em;
+  }
+  .creations .see-all {
+    font-size: 0.8rem;
+  }
+  footer {
+    padding: 0 0 3em;
+  }
+  footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer .container .footer-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .container .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  footer .container .left .logo {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  footer .container .left .footer-links {
+    padding: 1em 0 0;
+  }
+  footer .container .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
 }
 /*# sourceMappingURL=style.css.map */

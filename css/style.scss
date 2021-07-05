@@ -28,6 +28,7 @@ h1 {
     text-transform: uppercase;
     color: white;
     font-size: 2.6rem;
+    font-weight: 300;
     line-height: 1;
     margin: 0.5em 0;
 }
@@ -180,6 +181,20 @@ main {
             grid-column: 1/-1;
             align-self: end;
             justify-self: start;
+            z-index: 2;
+        }
+
+        .overlay {
+            z-index: 1;
+            background-image: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0),
+                rgba(0, 0, 0, 0.5) 80%
+            );
+            margin-bottom: 7px;
+
+            grid-row: 1/-1;
+            grid-column: 1/-1;
         }
     }
 
@@ -240,4 +255,145 @@ footer {
 .attribution a {
     font-family: $jose;
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1440px) {
+    html {
+        font-size: 22px;
+        font-weight: 300;
+    }
+
+    .container {
+        padding: 3em 7em 0;
+    }
+
+    header {
+        background-image: url(../images/desktop/image-hero.jpg);
+        background-size: 100%;
+        height: 51vh;
+
+        .header-content {
+            width: 58%;
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        .nav-btns {
+            position: relative;
+            background: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            gap: 1.5em;
+            width: 100%;
+            height: fit-content;
+
+            a {
+                text-transform: none;
+                padding-left: 0;
+                font-size: 0.8rem;
+                font-weight: 400;
+            }
+        }
+
+        .nav-toggle {
+            display: none;
+        }
+
+        .header-content {
+            margin-top: 0;
+        }
+    }
+
+    main {
+        text-align: left;
+    }
+
+    .interactive {
+        padding: 3em 0 0;
+        position: relative;
+
+        .interact__txt {
+            background: white;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            padding: 1em 0 0 4em;
+
+            p {
+                font-size: 0.78rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .creations {
+        padding-top: 7em;
+
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: 2;
+        grid-auto-flow: dense;
+        align-items: center;
+
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery {
+            padding-top: 3em;
+            grid-column: span 2;
+
+            .row {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .item {
+                padding-bottom: 0.8em;
+            }
+        }
+
+        .see-all {
+            font-size: 0.8rem;
+        }
+    }
+
+    footer {
+        padding: 0 0 3em;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            .footer-links {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .left {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .logo {
+                    transform: scale(1);
+                }
+
+                .footer-links {
+                    padding: 1em 0 0;
+                }
+            }
+
+            .right {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+        }
+    }
 }
