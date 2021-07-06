@@ -82,40 +82,38 @@ Animated Hamburger menu toggle
         .hamburger::after {
             top: 6px;
         }
+	transition: all 0.3s ease;
+}
 
-        transition: all 0.3s ease;
-    }
-
-    .nav-toggle-close {
-        transform: rotate(135deg);
-        .hamburger::before,
+.nav-toggle-close {
+  	transform: rotate(135deg);
+	.hamburger::before,
         .hamburger::after {
             top: 0;
             transform: rotate(90deg);
-        }
-    }
+	}
+}
 ```
 
 Underline hover animation
 ```css
 a::before {
-            content: "";
-            position: absolute;
-            width: 50%;
-            height: 2px;
-            bottom: 0;
-            left: 25%;
-            // background-color: white;
-            background-color: #99438f;
-            visibility: hidden;
-            transform: scaleX(0);
-            transition: all 0.3s ease-in-out 0s;
-        }
+	content: "";
+	position: absolute;
+    	width: 50%;
+	height: 2px;
+  	bottom: 0;
+	left: 25%;
+    	background-color: #99438f;
+     	visibility: hidden;
+   	transform: scaleX(0);
+   	transition: all 0.3s ease-in-out 0s;
+}
 
-        a:hover::before {
-            visibility: visible;
-            transform: scaleX(1);
-        }
+a:hover::before {
+       	visibility: visible;
+  	transform: scaleX(1);
+}
 ```
 
 ### Useful resources
